@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring accessors="true" comment="Delete 2 elements from project &apos;middle&apos;&#x0D;&#x0A;- Original project: &apos;middle&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     conn.xml&#x0D;&#x0A;     db.properties" description="Delete elements" element1="src/main/resources/dbconn/db.properties" element2="src/main/resources/dbconn/conn.xml" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="2" stamp="1672293027954" subPackages="false" version="1.0"/>&#x0A;&#x0A;</session>
