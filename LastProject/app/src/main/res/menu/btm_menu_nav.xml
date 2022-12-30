@@ -24,7 +24,7 @@
         android:id="@+id/btm_item4"
         android:icon="@drawable/ic_sheet"
         android:enabled="true"
-        android:title="전자결제"
+        android:title="전자결재"
         app:showAsAction="ifRoom"/>
 
 </menu>

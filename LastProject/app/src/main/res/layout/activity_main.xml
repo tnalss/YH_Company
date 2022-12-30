@@ -22,7 +22,6 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         app:itemIconTint="@color/btm_nav_color"
-        app:itemTextColor="@color/btm_nav_color"
-        />
+        app:itemTextColor="@color/btm_nav_color"/>
 
 </LinearLayout>
