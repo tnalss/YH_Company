@@ -12,7 +12,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"/>
     <View
-        android:background="#111"
+        android:background="#7A7979"
         android:layout_width="match_parent"
         android:layout_height="1dp" />
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -23,5 +23,4 @@
         android:layout_height="60dp"
         app:itemIconTint="@color/btm_nav_color"
         app:itemTextColor="@color/btm_nav_color"/>
-
 </LinearLayout>
