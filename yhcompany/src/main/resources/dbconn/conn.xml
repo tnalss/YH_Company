@@ -6,27 +6,32 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
 	<!-- db.properties 파일 위치 지정 -->
-	<context:property-placeholder 
-		location="classpath:dbconn/db.properties"/>
+	<context:property-placeholder
+		location="classpath:dbconn/db.properties" />
 
 	<!-- DBCP객체빈 생성 -->
-	<bean id="hanul_dbcp" class="org.apache.commons.dbcp2.BasicDataSource">
-		<property name="driverClassName" value="${oracleDriver}"/>
-		<property name="url" value="${url202}"/>
-		<property name="username" value="${ateam.username}"/>
-		<property name="password" value="${ateam.password}"/>
-	</bean>		
+	<bean id="hanul_dbcp"
+		class="org.apache.commons.dbcp2.BasicDataSource">
+		<property name="driverClassName" value="${oracleDriver}" />
+		<property name="url" value="${url202}" />
+		<property name="username" value="${ateam.username}" />
+		<property name="password" value="${ateam.password}" />
+	</bean>
 
 	<!-- Mybatis 사용을 위한 객체-SqlSession생성 객체인 SqlSessionFactory -->
-	<bean id="hanul_factory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="dataSource" ref="hanul_dbcp"/>
-		<property name="mapperLocations" value="classpath:sqlmap/*-mapper.xml"/>
+	<bean id="hanul_factory"
+		class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="hanul_dbcp" />
+		<property name="mapperLocations"
+			value="classpath:sqlmap/*-mapper.xml"/>
+			
 	</bean>
-	
+
 	<!-- Mybatis 사용을 위한 객체-SqlSession생성 객체 -->
 	<bean class="org.mybatis.spring.SqlSessionTemplate">
-		<constructor-arg name="sqlSessionFactory" ref="hanul_factory"/>
-		<qualifier value="hanul"/>
+		<constructor-arg name="sqlSessionFactory"
+			ref="hanul_factory" />
+		<qualifier value="hanul" />
 	</bean>
 
 
