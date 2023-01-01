@@ -25,9 +25,9 @@ public class MainActivity extends AppCompatActivity {
                 //홈
             }   else if ( item.getItemId() == R.id.btm_item2 ){
                 //일정
-            }   else if ( item.getItemId() == R.id.btm_item2 ){
+            }   else if ( item.getItemId() == R.id.btm_item3 ){
                 //출퇴근
-            }   else if ( item.getItemId() == R.id.btm_item2 ){
+            }   else if ( item.getItemId() == R.id.btm_item4 ){
                 //전자결재
             }
             return true;
