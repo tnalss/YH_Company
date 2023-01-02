@@ -1,14 +1,16 @@
-package com.example.lastproject;
+package com.example.lastproject.home;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class OnActivity extends AppCompatActivity {
+import com.example.lastproject.R;
+
+public class Organization_Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_on);
+        setContentView(R.layout.activity_organization);
     }
 }
