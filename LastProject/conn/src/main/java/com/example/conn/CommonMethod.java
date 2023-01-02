@@ -7,6 +7,9 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
 
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.gson.Gson;
 
 import java.io.File;
@@ -148,5 +151,15 @@ public class CommonMethod {
                 t.printStackTrace();//어떤 오류인지 로그에 찍히게 처리
             }
         });
+    }
+//setLayoutMananger 사용할때 안에 값
+
+    public static RecyclerView.LayoutManager getVManager(Context con){  //Context를 화면에 보이는 객체로부터 받아온다.
+        LinearLayoutManager manager = new LinearLayoutManager(con, RecyclerView.VERTICAL,false);
+        return manager;
+    }
+    public static RecyclerView.LayoutManager getHManager(Context con){  //Context를 화면에 보이는 객체로부터 받아온다.
+        LinearLayoutManager manager = new LinearLayoutManager(con, RecyclerView.HORIZONTAL,false);
+        return manager;
     }
 }

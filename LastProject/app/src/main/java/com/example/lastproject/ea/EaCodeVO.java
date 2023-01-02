@@ -1,14 +1,14 @@
 package com.example.lastproject.ea;
 
 public class EaCodeVO {
-    private String code_name, code_value, code_comments;
-
-    public String getCode_name() {
-        return code_name;
+    private String code_value, code_comments;
+    private int code_num;
+    public int getCode_num() {
+        return code_num;
     }
 
-    public void setCode_name(String code_name) {
-        this.code_name = code_name;
+    public void setCode_name(int code_num) {
+        this.code_num = code_num;
     }
 
     public String getCode_value() {

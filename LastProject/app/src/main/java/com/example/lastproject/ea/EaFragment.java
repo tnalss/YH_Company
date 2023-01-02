@@ -23,7 +23,6 @@ public class EaFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_ea, container, false);
-        //ApiClient.setBASEURL("http://192.168.0.23/middle/");
         tab_layout = v.findViewById(R.id.tab_layout);
         cardv_write = v.findViewById(R.id.cardv_write);
         activity = (MainActivity) getActivity();
