@@ -23,12 +23,6 @@ import member.MemberVO;
 public class AndController {
 	@Autowired
 	private CommonService common;
-	
-	//private AndDAO dao;
-//
-//	public AndController(AndDAO dao) {
-//		this.dao = dao;
-//	}
 
 	// @ResponseBody
 	@RequestMapping("/and")

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lo">
+
+<select id="loginInfo" resultType='login.LoginVO'>
+select * from tbl_emp
+where emp_no = #{emp_no} and emp_pw = #{emp_pw}
+</select>
+
+</mapper>

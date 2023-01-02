@@ -51,12 +51,13 @@
         android:id="@+id/btn_login_login"
         android:textStyle="bold"
         android:textSize="20dp"
-        android:backgroundTint="#40F467"
+        android:backgroundTint="#D2D2D1"
         android:text="로그인"
         android:layout_marginTop="30dp"
         android:layout_gravity="center"
         android:layout_width="210dp"
-        android:layout_height="60dp"/>
+        android:layout_height="60dp"
+        android:clickable="false" />
 
 
     <!-- 로그인 체크박스 -->
