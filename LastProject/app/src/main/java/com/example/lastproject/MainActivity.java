@@ -3,10 +3,12 @@ package com.example.lastproject;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 
 import com.example.lastproject.databinding.ActivityMainBinding;
+import com.example.lastproject.ea.EaFragment;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
             }   else if ( item.getItemId() == R.id.btm_item3 ){
                 //출퇴근
             }   else if ( item.getItemId() == R.id.btm_item4 ){
+                getSupportFragmentManager().beginTransaction().replace(R.id.container,new EaFragment()).commit();
                 //전자결재
             }
             return true;
