@@ -1,8 +1,9 @@
 package com.example.lastproject.login;
 
 
+import java.io.Serializable;
 
-public class LoginVO {
+public class LoginVO implements Serializable {
 	private int emp_no, emp_pw;
 
 	public int getEmp_no() {
