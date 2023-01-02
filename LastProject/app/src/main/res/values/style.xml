@@ -10,4 +10,6 @@
     <style name="small_size">
         <item name="android:textSize">12dp</item>
     </style>
+
+    <!--상단바 크기 스타일-->
 </resources>
