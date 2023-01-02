@@ -61,4 +61,8 @@ dependencies {
     //동그란 이미지 circle image view 23/1/2 csm
     implementation group: 'de.hdodenhof', name: 'circleimageview', version: '3.1.0'
 
+    // ViewPager2 23/1/2 csm
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+
+
 }
