@@ -55,5 +55,10 @@ dependencies {
     //네이버 로그인
     implementation 'com.navercorp.nid:oauth:5.3.0' // jdk 11
 
+    //이미지 넣는 glide
     implementation 'com.github.bumptech.glide:glide:4.11.0'
+
+    //동그란 이미지 circle image view 23/1/2 csm
+    implementation group: 'de.hdodenhof', name: 'circleimageview', version: '3.1.0'
+
 }

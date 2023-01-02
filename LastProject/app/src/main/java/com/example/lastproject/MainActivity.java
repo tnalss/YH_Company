@@ -9,6 +9,7 @@ import android.os.Bundle;
 
 import com.example.lastproject.databinding.ActivityMainBinding;
 import com.example.lastproject.ea.EaFragment;
+import com.example.lastproject.home.HomeFragment;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -21,10 +22,11 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         getSupportActionBar().hide();
-
+        changeFragment(new HomeFragment());
         binding.btmNav.setOnItemSelectedListener(item -> {
             if ( item.getItemId()== R.id.btm_item1 ) {
                 //홈
+                changeFragment(new HomeFragment());
             }   else if ( item.getItemId() == R.id.btm_item2 ){
                 //일정
             }   else if ( item.getItemId() == R.id.btm_item3 ){
