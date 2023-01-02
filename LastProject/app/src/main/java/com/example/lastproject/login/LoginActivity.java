@@ -3,15 +3,25 @@ package com.example.lastproject.login;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.conn.ApiClient;
+import com.example.conn.CommonMethod;
 import com.example.lastproject.MainActivity;
 import com.example.lastproject.R;
+import com.google.gson.Gson;
+
+import javax.security.auth.callback.Callback;
 
 public class LoginActivity extends AppCompatActivity {
     Button btn_login_login;
@@ -27,13 +37,72 @@ public class LoginActivity extends AppCompatActivity {
         btn_login_login = findViewById(R.id.btn_login_login);
         ApiClient.setBASEURL("http://192.168.0.28/middle/");
 
+
         // 로그인 버튼
+
         btn_login_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);
+                new CommonMethod().setParams("emp_no", edt_login_id.getText()).setParams
+                                            ("emp_pw", edt_login_pw.getText()).sendPost("login", (isResult, data) -> {
+                    LoginVO vo = new Gson().fromJson(data, LoginVO.class);
+                if(vo != null) {
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    Log.d("로그", "onClick: " + data);
+                }else {
+                    Toast.makeText(LoginActivity.this, "로그인 실패", Toast.LENGTH_SHORT).show();
+                }
+
+                });
             }
         });
+        /* id 버튼 비활성화 */
+        btn_login_login.setEnabled(false);
+        edt_login_id.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(edt_login_id.length() > 0 && edt_login_pw.length() > 0) {
+                    btn_login_login.setEnabled(true);
+                    btn_login_login.setBackgroundColor(Color.parseColor("#71F443"));
+                }else {
+                    btn_login_login.setEnabled(false);
+                    btn_login_login.setBackgroundColor(Color.parseColor("#D2D2D1"));
+                }
+            }
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        edt_login_pw.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(edt_login_pw.length() > 0 && edt_login_pw.length() > 0) {
+                    btn_login_login.setEnabled(true);
+                    btn_login_login.setBackgroundColor(Color.parseColor("#71F443"));
+                }else {
+                    btn_login_login.setEnabled(false);
+                    btn_login_login.setBackgroundColor(Color.parseColor("#D2D2D1"));
+                }
+            }
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+
     }
 }
