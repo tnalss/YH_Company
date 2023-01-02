@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.lastproject.R;
+
 import java.util.zip.Inflater;
 
 public class FormListAdapter extends RecyclerView.Adapter<FormListAdapter.ViewHolder> {
@@ -16,8 +18,9 @@ public class FormListAdapter extends RecyclerView.Adapter<FormListAdapter.ViewHo
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
-        return null;
+       View v = inflater.inflate(R.layout.item_ea_formlist,parent,false);
+        ViewHolder holder = new ViewHolder(v);
+        return holder;
     }
 
     @Override

@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.conn.CommonMethod;
 import com.example.lastproject.R;
 
 
@@ -20,6 +21,7 @@ public class FormListFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_form_list, container, false);
         recv_form = v.findViewById(R.id.recv_form);
 
+        new CommonMethod().sendPost("");
 
 
         return v;
