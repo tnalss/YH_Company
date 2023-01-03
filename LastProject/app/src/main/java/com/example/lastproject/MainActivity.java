@@ -8,6 +8,7 @@ import android.os.Bundle;
 
 
 import com.example.lastproject.common.Common;
+import com.example.lastproject.attend.AttendFragment;
 import com.example.lastproject.databinding.ActivityMainBinding;
 import com.example.lastproject.ea.EaFragment;
 import com.example.lastproject.home.HomeFragment;
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             }   else if ( item.getItemId() == R.id.btm_item2 ){
                 //일정
             }   else if ( item.getItemId() == R.id.btm_item3 ){
-                //출퇴근
+                getSupportFragmentManager().beginTransaction().replace(R.id.container,new AttendFragment()).commit();
             }   else if ( item.getItemId() == R.id.btm_item4 ){
                 getSupportFragmentManager().beginTransaction().replace(R.id.container,new EaFragment()).commit();
                 //전자결재
