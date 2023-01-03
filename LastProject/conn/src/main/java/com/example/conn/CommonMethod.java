@@ -152,6 +152,7 @@ public class CommonMethod {
             }
         });
     }
+<<<<<<< HEAD
 //setLayoutMananger 사용할때 안에 값
 
     public static RecyclerView.LayoutManager getVManager(Context con){  //Context를 화면에 보이는 객체로부터 받아온다.
@@ -162,4 +163,11 @@ public class CommonMethod {
         LinearLayoutManager manager = new LinearLayoutManager(con, RecyclerView.HORIZONTAL,false);
         return manager;
     }
+=======
+
+
+
+
+
+>>>>>>> origin/sumin
 }

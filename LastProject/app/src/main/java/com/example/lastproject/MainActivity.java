@@ -7,14 +7,18 @@ import android.content.Intent;
 import android.os.Bundle;
 
 
+import com.example.lastproject.common.Common;
+import com.example.lastproject.attend.AttendFragment;
 import com.example.lastproject.databinding.ActivityMainBinding;
 import com.example.lastproject.ea.EaFragment;
+import com.example.lastproject.home.HomeFragment;
+import com.example.lastproject.login.LoginVO;
 
 
 public class MainActivity extends AppCompatActivity {
         ActivityMainBinding binding;
         double waitTime=0;
-
+        LoginVO vo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,13 +26,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         getSupportActionBar().hide();
 
+        Intent intent = getIntent();
+        Common.loginInfo=  (LoginVO) intent.getSerializableExtra("loginInfo");
+
+        changeFragment(new HomeFragment());
         binding.btmNav.setOnItemSelectedListener(item -> {
             if ( item.getItemId()== R.id.btm_item1 ) {
                 //홈
+                changeFragment(new HomeFragment());
             }   else if ( item.getItemId() == R.id.btm_item2 ){
                 //일정
             }   else if ( item.getItemId() == R.id.btm_item3 ){
-                //출퇴근
+                getSupportFragmentManager().beginTransaction().replace(R.id.container,new AttendFragment()).commit();
             }   else if ( item.getItemId() == R.id.btm_item4 ){
                 changeFragment(new EaFragment());
                 //전자결재

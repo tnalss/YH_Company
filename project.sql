@@ -548,3 +548,30 @@ begin
     select seq_board_NO.nextval into :new.board_NO from dual;
 end;
 /
+
+
+
+
+
+
+
+////근태테이블 수정 23/1/3 csm
+//근태코드가 넘버여서 코드를 받기 위해 문자로 수정하였습니다.
+//근태의 attend_date 의 기본값이 없어서 신규 생성하였습니다.
+
+--근태 테이블
+CREATE TABLE TBL_ATTEND (
+	ATTEND_DATE  	DATE		default sysdate,
+	EMP_NO 	    NUMBER		NOT NULL,
+	ATTEND_ON 	timestamp(7)		NULL,
+	ATTEND_OFF	timestamp(7)		NULL,
+	ATT_CODE	VARCHAR2(10)		NULL
+);
+
+퇴근할때는 update를 이용해야 데이터가 늘어나지 않습니다.
+insert into tbl_attend (emp_no,att_code, attend_on)
+values (2,'W0', sysdate);
+
+UPDATE tbl_attend
+SET attend_off = sysdate , att_code='W1'
+WHERE emp_no=2; 
