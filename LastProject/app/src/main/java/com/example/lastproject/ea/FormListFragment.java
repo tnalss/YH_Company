@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 
 import com.example.conn.ApiClient;
 import com.example.conn.CommonMethod;
+import com.example.lastproject.MainActivity;
 import com.example.lastproject.R;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -23,18 +24,20 @@ import java.util.List;
 public class FormListFragment extends Fragment {
     RecyclerView recv_form;
     ArrayList<EaCodeVO> list;
+    MainActivity activity;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_form_list, container, false);
         recv_form = v.findViewById(R.id.recv_form);
+        activity = (MainActivity)getActivity();
         ApiClient.setBASEURL("http://192.168.0.23/middle/");
 
         new CommonMethod().sendPost("form.ea", (isResult, data) -> {
             list = new Gson().fromJson(data,
                     new TypeToken<ArrayList<EaCodeVO>>(){}.getType());
 
-            recv_form.setAdapter(new FormListAdapter(inflater,list,getContext()));
+            recv_form.setAdapter(new FormListAdapter(inflater,list,activity));
             recv_form.setLayoutManager(CommonMethod.getVManager(getContext()));
         });
 

@@ -1,6 +1,8 @@
 package com.example.lastproject.ea;
 
-public class EaCodeVO {
+import java.io.Serializable;
+
+public class EaCodeVO implements Serializable {
     private String code_value, code_comments;
     private int code_num;
     public int getCode_num() {

@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,14 +27,12 @@ public class EaFragment extends Fragment {
         tab_layout = v.findViewById(R.id.tab_layout);
         cardv_write = v.findViewById(R.id.cardv_write);
         activity = (MainActivity) getActivity();
-        int con = R.id.container;
         cardv_write.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 activity.changeFragment(new FormListFragment());
             }
         });
-
         tab_layout.addTab(tab_layout.newTab().setText("전체"));
         tab_layout.addTab(tab_layout.newTab().setText("결재완료"));
         tab_layout.addTab(tab_layout.newTab().setText("결재전"));
