@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             }   else if ( item.getItemId() == R.id.btm_item3 ){
                 getSupportFragmentManager().beginTransaction().replace(R.id.container,new AttendFragment()).commit();
             }   else if ( item.getItemId() == R.id.btm_item4 ){
-                getSupportFragmentManager().beginTransaction().replace(R.id.container,new EaFragment()).commit();
+                changeFragment(new EaFragment());
                 //전자결재
             }
             return true;
