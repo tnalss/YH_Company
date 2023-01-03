@@ -40,5 +40,6 @@
         <item>11월</item>
         <item>12월</item>
     </string-array>
+    <string name="title_activity_attend_maps">AttendMapsActivity</string>
 
 </resources>

@@ -29,6 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp">
         <RelativeLayout
+            android:id="@+id/location_now"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         <ImageView
@@ -45,12 +46,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@+id/location"
                 android:text="현재 위치" />
-            <ImageView
-                android:id="@+id/refresh"
-                android:layout_alignParentRight="true"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/refresh" />
+
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="match_parent"
@@ -137,6 +133,7 @@
             android:orientation="vertical"
             android:layout_gravity="center">
             <TextView
+                android:layout_marginTop="5dp"
                 style="@style/main_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -152,14 +149,13 @@
                 android:background="@drawable/item_radius"
                 android:text="근무현황 조회"/>
 
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recv_attend_record"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"/>
         </LinearLayout>
 
-        <!--QR 출퇴근-->
+        <!--QR 출퇴근
         <LinearLayout
             android:background="@drawable/item_radius2"
             android:gravity="center"
@@ -172,8 +168,9 @@
                 style="@style/sub_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="QR로그인"/>
+                android:text="qr출퇴근"/>
         </LinearLayout>
+        -->
     </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </LinearLayout>
