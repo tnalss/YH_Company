@@ -38,6 +38,8 @@ public class FormListAdapter extends RecyclerView.Adapter<FormListAdapter.ViewHo
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
         h.tv_form_title.setText(list.get(i).getCode_value());
         h.tv_form_comment.setText(list.get(i).getCode_comments());
+
+
     }
 
     @Override
