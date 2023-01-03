@@ -5,6 +5,7 @@
 <select id="loginInfo" resultType='login.LoginVO'>
 select * from tbl_emp
 where emp_no = #{emp_no} and emp_pw = #{emp_pw}
+
 </select>
 
 </mapper>

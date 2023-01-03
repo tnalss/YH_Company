@@ -27,4 +27,13 @@
         android:title="전자결재"
         app:showAsAction="ifRoom"/>
 
+<!-- 임시로 만듬 -->
+    <item
+        android:id="@+id/btm_logout"
+        android:icon="@drawable/ic_sheet"
+        android:enabled="true"
+        android:title="임시 로그아웃"
+        app:showAsAction="ifRoom"/>
+
+
 </menu>

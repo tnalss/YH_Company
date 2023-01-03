@@ -3,10 +3,14 @@ package com.example.lastproject;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 
 import com.example.lastproject.databinding.ActivityMainBinding;
+import com.example.lastproject.login.LoginActivity;
+import com.example.lastproject.login.LogoutActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -29,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
                 //출퇴근
             }   else if ( item.getItemId() == R.id.btm_item4 ){
                 //전자결재
+            }   else if(item.getItemId() == R.id.btm_logout )   {
+                //임시 로그아웃
+                Intent intent = new Intent(MainActivity.this, LogoutActivity.class);
+                startActivity(intent);
             }
             return true;
         });
@@ -49,4 +57,5 @@ public class MainActivity extends AppCompatActivity {
             super.onBackPressed(); // 액티비티 종료
         }
     }
+
 }
