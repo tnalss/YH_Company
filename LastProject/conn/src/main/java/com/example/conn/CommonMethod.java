@@ -150,27 +150,7 @@ public class CommonMethod {
         });
     }
 
-  //현재 날짜.시간 구하는 메소드
-        /*    long now = System.currentTimeMillis();
-            Date date = new Date(now);
 
-            SimpleDateFormat dateFormat1 = new SimpleDateFormat("yyyy-MM-dd");
-            SimpleDateFormat dateFormat2 = new SimpleDateFormat("hh:mm:ss");
-            SimpleDateFormat dateFormat3 = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-
-            String getTime1 = dateFormat1.format(date);
-            String getTime2 = dateFormat2.format(date);
-            String getTime3 = dateFormat3.format(date);*/
-
-
-    // 현재 시간을 "yyyy-MM-dd hh:mm:ss"로 표시하는 메소드
-    private String getTime() {
-        long now = System.currentTimeMillis();
-        Date date = new Date(now);
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-        String getTime = dateFormat.format(date);
-        return getTime;
-    }
 
 
 

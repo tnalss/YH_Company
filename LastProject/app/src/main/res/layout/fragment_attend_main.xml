@@ -63,9 +63,9 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_gravity="center"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="10dp"
                 android:text="현재시각"
-                android:textSize="30dp" />
+                android:textSize="20dp" />
         </RelativeLayout>
     </LinearLayout>
 
@@ -129,7 +129,6 @@
         </LinearLayout>
     <!--출퇴근 기록-->
         <LinearLayout
-            android:layout_margin="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/item_radius2"
             android:gravity="center"
@@ -142,21 +141,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="출퇴근 기록"/>
-            <TextView
+            <android.widget.Button
+                android:layout_marginTop="5dp"
                 android:gravity="center"
                 android:id="@+id/workday"
-                android:background="@drawable/item_radius4"
-                android:layout_gravity="right"
-                android:layout_margin="10dp"
+                android:layout_gravity="center"
                 style="@style/small_size"
-                android:layout_width="90dp"
-                android:layout_height="20dp"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@drawable/item_radius"
                 android:text="근무현황 조회"/>
+
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recv_attend_record"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="200dp"/>
         </LinearLayout>
 
         <!--QR 출퇴근-->
