@@ -33,10 +33,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         binding.tvEmpName.setText(Common.loginInfo.getEmp_name());
         binding.tvEmpDepRank.setText(Common.loginInfo.getDepartment_name()+" / "+Common.loginInfo.getRank_name());
         //쿼리 날려서 출퇴근 여부 파악
-        new CommonMethod().setParams("emp_no",Common.loginInfo.getEmp_no()).sendPost("attend",(isResult, data) -> {
+        new CommonMethod().setParams("emp_no",Common.loginInfo.getEmp_no()).sendPost("attendOrNot",(isResult, data) -> {
 
         });
-
 
 
         View v = binding.getRoot();

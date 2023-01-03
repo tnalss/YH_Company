@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".home.HomeFragment"
     android:orientation="vertical">
 
@@ -123,10 +124,6 @@
     </LinearLayout>
 
     <!--일정따서 일정넣던가-->
-    <com.rudo.calendarhorizontal.HorizontalCalendarView
-        android:id="@+id/horizontalcalendarview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
 
     <!--메뉴 디자인 필요-->
 
