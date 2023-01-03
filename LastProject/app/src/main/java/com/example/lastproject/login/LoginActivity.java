@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         edt_login_id = findViewById(R.id.edt_login_id);
         btn_login_login = findViewById(R.id.btn_login_login);
 
-        ApiClient.setBASEURL("http://192.168.0.2/middle/");
+        ApiClient.setBASEURL("http://180.65.26.177/middle/");
 
         // 로그인 버튼
         btn_login_login.setOnClickListener(new View.OnClickListener() {

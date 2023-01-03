@@ -17,7 +17,7 @@ public class UtilController {
 	@RequestMapping("/attendOrNot")
 	public void attendOrNot(int emp_no) {
 		LoginVO vo = sql.selectOne("util.attendOrNot",emp_no);
-		System.out.println(vo.getAtt_code());
+		//System.out.println(vo.getAtt_code());
 		
 	}
 }
