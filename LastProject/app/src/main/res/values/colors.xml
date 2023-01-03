@@ -10,4 +10,11 @@
     <color name="main_color">#764f82</color>
     <color name="sub_color">#D9D2D9</color>
     <color name="light_color">#D3D3D3</color>
+
+
+    <!--주영 사용 컬러 코드-->
+    <color name="blue">#3A54E6</color>
+    <color name="green">#59B15D</color>
+    <color name="red">#E63D3D</color>
+    <color name="grey">#363636</color>
 </resources>

@@ -22,22 +22,29 @@
     </RelativeLayout>
 
     <LinearLayout
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <TextView
+            style="@style/main_size"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="출퇴근 기록"/>
-        <ListView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recv_attend_record"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </LinearLayout>
     <LinearLayout
+        android:layout_margin="10dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
+            android:textStyle="bold"
+            style="@style/main_size"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="근태신청관리"/>
@@ -49,63 +56,76 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="근태 신청 현황"/>
-                <TextView
-                    android:layout_alignParentRight="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="총 신청 건수"/>
             </RelativeLayout>
-        <LinearLayout
+        <RelativeLayout
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content" >
             <!--신청현황1-->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <TextView
+                    android:textColor="@color/blue"
+                    style="@style/main_size"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="승인 완료"/>
                 <TextView
+                    android:textColor="@color/blue"
+                    style="@style/sub_size"
+                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1"/>
             </LinearLayout>
             <!--신청현황2-->
             <LinearLayout
+                android:layout_centerInParent="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <TextView
+                    android:textColor="@color/green"
+                    style="@style/main_size"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="승인 완료"/>
+                    android:text="요청 중"/>
                 <TextView
+                    android:textColor="@color/green"
+                    style="@style/sub_size"
+                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1"/>
             </LinearLayout>
             <!--신청현황3-->
             <LinearLayout
+                android:layout_alignParentRight="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <TextView
+                    android:textColor="@color/red"
+                    style="@style/main_size"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="승인 완료"/>
+                    android:text="반려"/>
                 <TextView
+                    android:textColor="@color/red"
+                    style="@style/sub_size"
+                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1"/>
             </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
+        </RelativeLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/recv_attend_apply"/>
+    </LinearLayout>
 </LinearLayout>
 </androidx.core.widget.NestedScrollView>

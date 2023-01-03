@@ -14,6 +14,7 @@ import com.example.lastproject.R;
 public class attend_main extends Fragment {
 
     Button on, off;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
