@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
                 //전자결재
             }   else if(item.getItemId() == R.id.btm_logout )   {
                 //임시 로그아웃
-                Intent intent = new Intent(MainActivity.this, LogoutActivity.class);
-                startActivity(intent);
+                Intent intent2 = new Intent(MainActivity.this, LogoutActivity.class);
+                startActivity(intent2);
             }
             return true;
         });
