@@ -1,23 +1,14 @@
 package com.example.lastproject.login;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
+
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -26,15 +17,10 @@ import com.example.conn.CommonMethod;
 import com.example.lastproject.MainActivity;
 import com.example.lastproject.R;
 import com.google.gson.Gson;
-import com.navercorp.nid.oauth.NidOAuthPreferencesManager;
-
-import javax.security.auth.callback.Callback;
 
 public class LoginActivity extends AppCompatActivity {
     Button btn_login_login;
     EditText edt_login_id, edt_login_pw;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         edt_login_id = findViewById(R.id.edt_login_id);
         btn_login_login = findViewById(R.id.btn_login_login);
 
-        ApiClient.setBASEURL("http://192.168.0.28/middle/");
-
+        ApiClient.setBASEURL("http://192.168.0.2/middle/");
 
         // 로그인 버튼
         btn_login_login.setOnClickListener(new View.OnClickListener() {
@@ -56,12 +41,11 @@ public class LoginActivity extends AppCompatActivity {
                 new CommonMethod().setParams("emp_no", edt_login_id.getText()).setParams
                         ("emp_pw", edt_login_pw.getText()).sendPost("login", (isResult, data) -> {
                     LoginVO vo = new Gson().fromJson(data, LoginVO.class);
-                    if (vo != null) {
 
+                    if (vo != null && isResult) {
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         intent.putExtra("loginInfo", vo);
                         startActivity(intent);
-
 
                     } else {
                         Toast.makeText(LoginActivity.this, "로그인 실패", Toast.LENGTH_SHORT).show();

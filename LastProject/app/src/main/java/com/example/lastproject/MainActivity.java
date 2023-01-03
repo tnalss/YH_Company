@@ -7,21 +7,27 @@ import android.content.Intent;
 import android.os.Bundle;
 
 
+import com.example.lastproject.common.Common;
 import com.example.lastproject.databinding.ActivityMainBinding;
 import com.example.lastproject.ea.EaFragment;
 import com.example.lastproject.home.HomeFragment;
+import com.example.lastproject.login.LoginVO;
 
 
 public class MainActivity extends AppCompatActivity {
         ActivityMainBinding binding;
         double waitTime=0;
-
+        LoginVO vo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         getSupportActionBar().hide();
+
+        Intent intent = getIntent();
+        Common.loginInfo=  (LoginVO) intent.getSerializableExtra("loginInfo");
+
         changeFragment(new HomeFragment());
         binding.btmNav.setOnItemSelectedListener(item -> {
             if ( item.getItemId()== R.id.btm_item1 ) {

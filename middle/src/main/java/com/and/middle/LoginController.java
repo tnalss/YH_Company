@@ -16,7 +16,7 @@ import login.LoginVO;
 @RestController
 public class LoginController {
 	@Autowired private SqlSession sql;
-	@RequestMapping("/login")
+	@RequestMapping(path =  "/login" , produces = "text/html; charset=utf-8")
 	public String login(String emp_no, String emp_pw, HttpSession session) {		
 		HashMap<String, String> map = new HashMap<String, String>();
 		

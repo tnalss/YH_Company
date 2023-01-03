@@ -1,9 +1,3 @@
 INDEX VERSION 1.131
-C:\Users\Reo\Desktop\YH_Company\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3270575020.index
-\yhcompany\src\main\java
-C:\Users\Reo\Desktop\YH_Company\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\116531322.index
-\yhcompany\src\main\java
-C:\Users\Reo\Desktop\YH_Company\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1730449644.index
-\yhcompany\src\main\java
 C:\Users\Reo\Desktop\YH_Company\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\390785669.index
 \middle\src\main\java

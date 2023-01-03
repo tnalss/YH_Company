@@ -3,12 +3,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".home.HomeFragment"
     android:orientation="vertical">
 
     <!--최상단 로고, 알림,설정, 버거메뉴 -->
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_gravity="center"
+            android:src="@drawable/onlylogo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+        <TextView
+            android:layout_gravity="center"
+            style="@style/main_size"
+            android:text="@string/app_name"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/iv_noti"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_noti"
+            android:layout_width="25dp"
+            android:layout_height="25dp"/>
 
+        <ImageView
+            android:id="@+id/iv_burger"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_burger"
+            android:layout_gravity="center"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+
+    </LinearLayout>
     <!--상단 사용자 정보-->
     <LinearLayout
         android:background="@drawable/item_radius2"
@@ -48,7 +80,7 @@
 
             </LinearLayout>
             <TextView
-                android:id="@+id/emp_dep_rank"
+                android:id="@+id/tv_emp_dep_rank"
                 android:padding="5dp"
                 style="@style/sub_size"
                 android:text="부서명/ 직급"
@@ -91,14 +123,10 @@
     </LinearLayout>
 
     <!--일정따서 일정넣던가-->
-
-  <!--      <Horizontal
-            android:id="@+id/calendarView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:textColorSelected="#FFFF"/>
--->
-
+    <com.rudo.calendarhorizontal.HorizontalCalendarView
+        android:id="@+id/horizontalcalendarview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <!--메뉴 디자인 필요-->
 

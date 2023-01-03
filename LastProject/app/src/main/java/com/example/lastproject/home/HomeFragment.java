@@ -8,10 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.conn.CommonMethod;
 import com.example.lastproject.R;
+import com.example.lastproject.common.Common;
 import com.example.lastproject.databinding.FragmentHomeBinding;
-
-import java.util.Calendar;
 
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
@@ -22,20 +22,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
         binding = FragmentHomeBinding.inflate(inflater,container,false);
 
-        /* starts before 1 month from now */
-        Calendar startDate = Calendar.getInstance();
-        startDate.add(Calendar.MONTH, -1);
-
-        /* ends after 1 month from now */
-        Calendar endDate = Calendar.getInstance();
-        endDate.add(Calendar.MONTH, 1);
-
-        HorizontalCalendar horizontalCalendar = new HorizontalCalendar
-                .Builder(container, R.id.calendarView).range(startDate, endDate)
-                .datesNumberOnScreen(5)
-                .build();
-
-
         binding.menu11.setClipToOutline(true);
         binding.menu12.setClipToOutline(true);
         binding.menu13.setClipToOutline(true);
@@ -43,6 +29,14 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         binding.menu22.setClipToOutline(true);
         binding.menu23.setClipToOutline(true);
         //visibility 속성을 이용해서 일반회원의 경우 메뉴 몇 개를 숨겨야함..
+
+        binding.tvEmpName.setText(Common.loginInfo.getEmp_name());
+        binding.tvEmpDepRank.setText(Common.loginInfo.getDepartment_name()+" / "+Common.loginInfo.getRank_name());
+        //쿼리 날려서 출퇴근 여부 파악
+        new CommonMethod().setParams("emp_no",Common.loginInfo.getEmp_no()).sendPost("attend",(isResult, data) -> {
+
+        });
+
 
 
         View v = binding.getRoot();
