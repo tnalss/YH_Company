@@ -13,15 +13,15 @@ import com.example.lastproject.R;
 
 
 public class WriteEaFragment extends Fragment {
-    TextView tv_a;
+    TextView tv_main;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_write_ea, container, false);
-        tv_a = v.findViewById(R.id.tv_a);
+        tv_main = v.findViewById(R.id.tv_main);
 
         EaCodeVO vo = (EaCodeVO) getArguments().getSerializable("form");
-        tv_a.setText(vo.getCode_value());
+        tv_main.setText(vo.getCode_value());
 
         return v;
     }

@@ -3,7 +3,7 @@
 <mapper namespace="ea">
 
 <select id="formlist" resultType='ea.EaCodeVO'>
-select code_num, code_value, code_comments from get_code_table('P')
+select * from get_code_table('P')
 </select>
 
 </mapper>
