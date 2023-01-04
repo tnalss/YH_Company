@@ -1,6 +1,9 @@
 #Tomcat publish data
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/sumin
+<<<<<<< HEAD
 <<<<<<< HEAD
 #Tue Jan 03 01:31:24 KST 2023
 org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Reo\\.m2\\repository\\org\\springframework\\spring-web\\5.3.18\\spring-web-5.3.18.jar=WEB-INF/lib/spring-web-5.3.18.jar
@@ -11,6 +14,9 @@ org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Reo\\.m2\\repository\\org\\spri
 >>>>>>> origin/Parkcj
 org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\admin\\.m2\\repository\\org\\springframework\\spring-web\\5.3.18\\spring-web-5.3.18.jar=WEB-INF/lib/spring-web-5.3.18.jar
 >>>>>>> origin/Parkcj
+<<<<<<< HEAD
 =======
 #Tue Jan 03 23:49:46 KST 2023
 >>>>>>> 338ce2a18ae6bad9719a07a7493a7ab972e51998
+=======
+>>>>>>> origin/sumin

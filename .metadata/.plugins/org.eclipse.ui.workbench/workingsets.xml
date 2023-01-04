@@ -5,8 +5,12 @@
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1672291727691_2" label="Window Working Set" name="Aggregate for window 1672291727691"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1672726259172_3" label="Window Working Set" name="Aggregate for window 1672726259172"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1672758147738_4" label="Window Working Set" name="Aggregate for window 1672758147738"/>
 =======
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1672756753286_4" label="Window Working Set" name="Aggregate for window 1672756753286"/>
 >>>>>>> 338ce2a18ae6bad9719a07a7493a7ab972e51998
+=======
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1672758147738_4" label="Window Working Set" name="Aggregate for window 1672758147738"/>
+>>>>>>> origin/sumin
 </workingSetManager>

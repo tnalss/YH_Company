@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/sumin
 INDEX VERSION 1.131+C:\Users\Reo\Desktop\YH_Company\.metadata\.plugins\org.eclipse.jdt.core
 3616084957.index
 473492133.index
@@ -35,6 +38,7 @@ INDEX VERSION 1.131+C:\Users\Reo\Desktop\YH_Company\.metadata\.plugins\org.eclip
 3397407716.index
 91461976.index
 1888746934.index
+<<<<<<< HEAD
 =======
 INDEX VERSION 1.131+D:\jooyoung\YH_Company\.metadata\.plugins\org.eclipse.jdt.core
 3038998242.index
@@ -91,3 +95,5 @@ INDEX VERSION 1.131+D:\jooyoung\YH_Company\.metadata\.plugins\org.eclipse.jdt.co
 903439062.index
 151247497.index
 >>>>>>> 338ce2a18ae6bad9719a07a7493a7ab972e51998
+=======
+>>>>>>> origin/sumin
