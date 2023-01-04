@@ -1,6 +1,13 @@
-INDEX VERSION 1.4+C:\Users\Reo\Desktop\YH_Company\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+INDEX VERSION 1.4+D:\jooyoung\YH_Company\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3593459730.index
+1573214308.index
+2539505387.index
+3629301148.index
 1448863697.index
+<<<<<<< HEAD
 1154424531.index
 2109457950.index
 491928000.index
 3577533285.index
+=======
+>>>>>>> 338ce2a18ae6bad9719a07a7493a7ab972e51998

@@ -42,10 +42,15 @@ public class LoginActivity extends AppCompatActivity {
         edt_login_pw = findViewById(R.id.edt_login_pw);
         edt_login_id = findViewById(R.id.edt_login_id);
         btn_login_login = findViewById(R.id.btn_login_login);
+<<<<<<< HEAD
         tv_login_pwfind = findViewById(R.id.tv_login_pwfind);
         chec_id = findViewById(R.id.chec_id);
         chec_gogo = findViewById(R.id.chec_gogo);
         ApiClient.setBASEURL("http://192.168.0.2/middle/");
+=======
+
+        ApiClient.setBASEURL("http://180.65.26.177/middle/");
+>>>>>>> 338ce2a18ae6bad9719a07a7493a7ab972e51998
 
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
