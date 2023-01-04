@@ -45,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
         tv_login_pwfind = findViewById(R.id.tv_login_pwfind);
         chec_id = findViewById(R.id.chec_id);
         chec_gogo = findViewById(R.id.chec_gogo);
-        ApiClient.setBASEURL("http://192.168.0.2/middle/");
+        ApiClient.setBASEURL("http://192.168.0.28/middle/");
 
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -55,8 +55,6 @@ public class LoginActivity extends AppCompatActivity {
             chec_id.setChecked(true);
             edt_login_id.setText(id);
         }
-
-
 
         /* 체크박스 핸들러 */
         chec_id.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

@@ -22,7 +22,9 @@
         android:layout_gravity="center"
         android:background="@drawable/item_radius"
         android:layout_width="210dp"
-        android:layout_height="50dp"/>
+        android:layout_height="50dp"
+        android:singleLine="true"
+        android:lines="1"/>
 
     <!-- 비밀번호 -->
     <EditText
@@ -33,18 +35,10 @@
         android:layout_gravity="center"
         android:background="@drawable/item_radius"
         android:layout_width="210dp"
-        android:layout_height="50dp"/>
-
-    <!--패스워드 찾기-->
-    <TextView
-        android:id="@+id/tv_login_pwfind"
-        android:textSize="17dp"
-        android:textColor="#000"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:text="패스워드 찾기"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="50dp"
+        android:singleLine="true"
+        android:lines="1"
+        android:password="true"/>
 
     <!-- 로그인 -->
     <Button
@@ -58,6 +52,17 @@
         android:layout_width="210dp"
         android:layout_height="60dp"
         android:clickable="false" />
+
+    <!--패스워드 찾기-->
+    <TextView
+        android:id="@+id/tv_login_pwfind"
+        android:textSize="17dp"
+        android:textColor="#000"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:text="패스워드 찾기"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 
     <!-- 로그인 체크박스 -->
