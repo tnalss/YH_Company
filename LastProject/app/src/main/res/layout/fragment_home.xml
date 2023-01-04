@@ -130,6 +130,7 @@
 
     <!--메뉴 맨 윗줄-->
     <LinearLayout
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -223,6 +224,7 @@
     </LinearLayout>
     <!--메뉴 두번째줄-->
     <LinearLayout
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -319,6 +321,7 @@
 
     <!--(위치는 추후 지정)회사 주요 공지사항 캐러셀-->
     <RelativeLayout
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
